@@ -1,2 +1,5 @@
-﻿  SplashState.cpp
-  Project2D.vcxproj -> L:\aieBootstrap\temp\Project2D\Debug\Project2D.exe
+﻿  Player.cpp
+l:\assignments\game project\project2d\player.cpp(30): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+l:\assignments\game project\project2d\player.cpp(31): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+l:\assignments\game project\project2d\player.cpp(149): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Project2D.vcxproj -> L:\assignments\game project\temp\Project2D\Debug\Project2D.exe

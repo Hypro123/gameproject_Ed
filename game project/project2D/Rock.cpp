@@ -30,7 +30,6 @@ Rock::~Rock()
 
 void Rock::drawRock(Renderer2D* m_2dRenderer)
 {
-	Matrix3 temp;
 	//updateGlobalTransform();
 
 	m_2dRenderer->drawSpriteTransformed3x3(m_rock, global_Transform);

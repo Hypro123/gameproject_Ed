@@ -11,7 +11,7 @@ public:
 	StateMachine();
 	~StateMachine();
 
-	void Update(float fDeltaTime);
+	void Update(float fDeltaTime, aie::Renderer2D* m_2dRenderer);
 	void AddState(int nStateIndex, State* pState);
 	void Draw(aie::Renderer2D* m_2dRenderer);
 	void pushState(int nStateIndex);

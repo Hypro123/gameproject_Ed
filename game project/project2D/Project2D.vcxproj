@@ -94,6 +94,7 @@
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameState.cpp" />
     <ClCompile Include="LoadingCircle.cpp" />
     <ClCompile Include="LoadingState.cpp" />
     <ClCompile Include="main.cpp" />
@@ -103,6 +104,10 @@
     <ClCompile Include="SATbase.cpp" />
     <ClCompile Include="SplashState.cpp" />
     <ClCompile Include="StateMachine.cpp" />
+    <ClCompile Include="WallBot.cpp" />
+    <ClCompile Include="WallLeft.cpp" />
+    <ClCompile Include="WallRight.cpp" />
+    <ClCompile Include="Walls.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h" />
@@ -111,6 +116,7 @@
     <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameState.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="GraphNode.h" />
     <ClInclude Include="Hit.h" />
@@ -129,6 +135,10 @@
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
     <ClInclude Include="Tag.h" />
+    <ClInclude Include="WallBot.h" />
+    <ClInclude Include="WallLeft.h" />
+    <ClInclude Include="WallRight.h" />
+    <ClInclude Include="Walls.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

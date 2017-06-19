@@ -11,7 +11,7 @@ public:
 
 	void OnEnter();
 
-	void OnUpdate(float deltaTime, StateMachine* pObject);
+	void OnUpdate(float deltaTime, StateMachine* pObject, aie::Renderer2D* m_2dRenderer);
 
 	void OnDraw(aie::Renderer2D* m_2dRenderer);
 

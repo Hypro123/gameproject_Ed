@@ -22,6 +22,9 @@
     <Filter Include="States">
       <UniqueIdentifier>{574ea313-0414-4bd5-83db-4af01b493823}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Walls">
+      <UniqueIdentifier>{cd6cbe33-832d-46fe-9dfb-04fa452e8c45}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application2D.cpp">
@@ -59,6 +62,21 @@
     </ClCompile>
     <ClCompile Include="LoadingCircle.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="WallBot.cpp">
+      <Filter>Walls</Filter>
+    </ClCompile>
+    <ClCompile Include="WallLeft.cpp">
+      <Filter>Walls</Filter>
+    </ClCompile>
+    <ClCompile Include="WallRight.cpp">
+      <Filter>Walls</Filter>
+    </ClCompile>
+    <ClCompile Include="Walls.cpp">
+      <Filter>Walls</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +151,21 @@
     </ClInclude>
     <ClInclude Include="LoadingCircle.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Walls.h">
+      <Filter>Walls</Filter>
+    </ClInclude>
+    <ClInclude Include="WallBot.h">
+      <Filter>Walls</Filter>
+    </ClInclude>
+    <ClInclude Include="WallLeft.h">
+      <Filter>Walls</Filter>
+    </ClInclude>
+    <ClInclude Include="WallRight.h">
+      <Filter>Walls</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

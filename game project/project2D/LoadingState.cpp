@@ -1,12 +1,13 @@
 #include "LoadingState.h"
 #include "ResourceManager.h"
+#include "StateMachine.h"
 
 LoadingState::LoadingState()
 {
 	ResourceManager<aie::Texture>* m_tLoading = ResourceManager<aie::Texture>::getInstance();
 	m_ptexture = m_tLoading->LoadResource("./textures/Map.png");
 	m_pCircle = new LoadingCircle();
-
+	m_pCircle->local_Transform.setPosition(560, -300);
 	timer = 0;
 }
 
@@ -23,12 +24,14 @@ void LoadingState::OnDraw(aie::Renderer2D* m_2dRenderer)
 	m_pCircle->Draw(m_2dRenderer);
 }
 
-void LoadingState::OnUpdate(float deltaTime, StateMachine* pObject)
+void LoadingState::OnUpdate(float deltaTime, StateMachine* pObject, aie::Renderer2D* m_2dRenderer)
 {
 	timer += deltaTime;
 	m_pCircle->Update(deltaTime);
 
-	if (timer > 3)
+	m_2dRenderer->setCameraPos(-640, -360);
+
+	if (timer > 5)
 	{
 		pObject->popState();
 		pObject->pushState(2);

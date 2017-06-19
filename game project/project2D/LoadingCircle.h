@@ -13,5 +13,6 @@ public:
 	void Draw(aie::Renderer2D* m_2dRenderer);
 
 	aie::Texture* m_loadCircle;
+	float timer;
 };
 

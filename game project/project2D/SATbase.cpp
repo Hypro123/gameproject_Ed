@@ -53,6 +53,7 @@ Hit SATbase::CheckCollisions(GameObject* pObject)
 	for (int i = 0; i < m_collisionList.Size(); ++i)
 	{
 		float minCol = 999999;
+		bool bColliding = true;
 		Vector2 V2norm;
 
 		if (pObject == m_collisionList[i])
@@ -93,8 +94,10 @@ Hit SATbase::CheckCollisions(GameObject* pObject)
 
 			if (max1 > min2 && max2 < min1)
 			{
-				hit.ety = nullptr;
-				return hit;
+				/*hit.ety = nullptr;
+				return hit;*/
+				bColliding = false;
+				break;
 			}
 
 			//finding min normal
@@ -114,6 +117,9 @@ Hit SATbase::CheckCollisions(GameObject* pObject)
 			}
 
 		}
+
+		if (!bColliding)
+			continue;
 
 		for (int j = 0; j < 4; j++)
 		{
@@ -147,8 +153,10 @@ Hit SATbase::CheckCollisions(GameObject* pObject)
 
 			if (max1 > min2 && max2 < min1)
 			{
-				hit.ety = nullptr;
-				return hit;
+				/*hit.ety = nullptr;
+				return hit;*/
+				bColliding = false;
+				break;
 			}
 			//finding min normal
 			float St1 = max1 - min2;
@@ -167,6 +175,9 @@ Hit SATbase::CheckCollisions(GameObject* pObject)
 			}
 
 		}
+		if (!bColliding)
+			continue;
+
 		hit.ety = m_collisionList[i];
 		hit.depth = minCol;
 		hit.norm = V2norm;

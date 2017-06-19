@@ -33,7 +33,7 @@ Player::Player()
 	SATbase::GetInstance()->CreateObject(this);
 
 	//creates objectpool
-	objectpool = new ObjectPool(1000);
+	objectpool = new ObjectPool(50);
 }
 
 
@@ -64,6 +64,15 @@ void Player::update(float deltaTime)
 	Matrix3 temp;
 	float rot = 0;
 	Matrix3 tempRotation;
+	float speedCheck = 0;
+	//----------------------------------------------
+	//Teleport to spawn
+	//----------------------------------------------
+
+	if (input->wasKeyPressed(INPUT_KEY_ESCAPE))
+	{
+		local_Transform.setPosition(0.0f, 0.0f);
+	}
 
 	//----------------------------------------------
 	//Movement Forward

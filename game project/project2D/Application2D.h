@@ -3,9 +3,6 @@
 #include "Application.h"
 #include "Renderer2D.h"
 #include "Audio.h"
-#include "Player.h"
-#include "Rock.h"
-#include "SATbase.h"
 #include "StateMachine.h"
 
 class Application2D : public aie::Application {
@@ -21,11 +18,6 @@ public:
 	virtual void draw();
 
 	StateMachine* pStateMachine;
-
-	Rock* rock;
-	Player* player;
-
-	SATbase* SAT;
 
 protected:
 

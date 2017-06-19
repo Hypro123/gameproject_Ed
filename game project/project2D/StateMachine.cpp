@@ -11,12 +11,12 @@ StateMachine::~StateMachine()
 {
 }
 
-void StateMachine::Update(float fDeltaTime)
+void StateMachine::Update(float fDeltaTime, aie::Renderer2D* m_2dRenderer)
 {
-	if (m_StateList.Size() <= 0)
+	if (m_CurrentState.Size() <= 0)
 		return;
 
-	m_CurrentState.Top()->OnUpdate(fDeltaTime, this);
+	m_CurrentState.Top()->OnUpdate(fDeltaTime, this, m_2dRenderer);
 }
 
 void StateMachine::Draw(aie::Renderer2D* m_2dRenderer)
