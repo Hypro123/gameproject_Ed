@@ -7,6 +7,8 @@
 #include "SplashState.h"
 #include "GameState.h"
 #include "LoadingState.h"
+#include "MenuState.h"
+#include "PauseState.h"
 
 using namespace aie;
 
@@ -26,8 +28,10 @@ bool Application2D::startup()
 	//State Managment
 	pStateMachine = new StateMachine();
 	pStateMachine->AddState(0, new SplashState());
-	pStateMachine->AddState(1, new LoadingState());
-	pStateMachine->AddState(2, new GameState());
+	pStateMachine->AddState(1, new MenuState());
+	pStateMachine->AddState(2, new LoadingState());
+	pStateMachine->AddState(3, new GameState());
+	pStateMachine->AddState(4, new PauseState());
 	
 	pStateMachine->pushState(0);
 	m_timer = 0;
@@ -46,9 +50,13 @@ void Application2D::update(float deltaTime)
 {
 	m_timer += deltaTime;
 	pStateMachine->Update(deltaTime, m_2dRenderer);
+	Input* input = Input::getInstance();
+
+	if (input->wasKeyPressed(INPUT_KEY_BACKSPACE))
+		quit();
 }
 
-void Application2D::draw() 
+void Application2D::draw()
 {
 	// wipe the screen to the background colour
 	clearScreen();

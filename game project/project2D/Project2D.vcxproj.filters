@@ -78,6 +78,12 @@
     <ClCompile Include="Walls.cpp">
       <Filter>Walls</Filter>
     </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
@@ -166,6 +172,12 @@
     </ClInclude>
     <ClInclude Include="WallRight.h">
       <Filter>Walls</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseState.h">
+      <Filter>States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

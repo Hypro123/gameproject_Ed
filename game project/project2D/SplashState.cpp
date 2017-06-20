@@ -22,7 +22,7 @@ SplashState::~SplashState()
 void SplashState::OnDraw(aie::Renderer2D* m_2dRenderer)
 {
 	m_2dRenderer->drawSprite(m_ptexture, 0.0f, 0.0f, 1280.0f, 720.0f);
-	m_2dRenderer->drawSprite(m_title, 0.0f, 0.0f, 0.0f, 0.0f);
+	m_2dRenderer->drawSprite(m_title, 0.0f, 70.0f, 0.0f, 0.0f);
 }
 
 void SplashState::OnUpdate(float deltaTime, StateMachine* pObject, aie::Renderer2D* m_2dRenderer)

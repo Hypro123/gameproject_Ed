@@ -4,6 +4,7 @@
 
 StateMachine::StateMachine()
 {
+	m_bRenderBackground = false;
 }
 
 

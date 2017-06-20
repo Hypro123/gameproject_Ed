@@ -98,7 +98,9 @@
     <ClCompile Include="LoadingCircle.cpp" />
     <ClCompile Include="LoadingState.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="ObjectPool.cpp" />
+    <ClCompile Include="PauseState.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Rock.cpp" />
     <ClCompile Include="SATbase.cpp" />
@@ -124,7 +126,9 @@
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="LoadingCircle.h" />
     <ClInclude Include="LoadingState.h" />
+    <ClInclude Include="MenuState.h" />
     <ClInclude Include="ObjectPool.h" />
+    <ClInclude Include="PauseState.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceManager.h" />

@@ -18,6 +18,7 @@ public:
 	void OnExit();
 
 	aie::Texture* m_ptexture;
+	aie::Texture* m_phelp;
 
 	LoadingCircle* m_pCircle;
 

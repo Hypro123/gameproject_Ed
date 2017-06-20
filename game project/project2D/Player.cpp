@@ -50,7 +50,7 @@ void Player::draw(Renderer2D* m_2dRenderer)
 
 	Input* input = Input::getInstance();
 	
-	m_2dRenderer->drawSpriteTransformed3x3(m_shipTexture, global_Transform, 0.0f, 0.0f, -1);
+	m_2dRenderer->drawSpriteTransformed3x3(m_shipTexture, global_Transform, 0.0f, 0.0f, 0);
 
 	objectpool->draw(m_2dRenderer);
 }
