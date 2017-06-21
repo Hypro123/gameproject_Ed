@@ -1,6 +1,7 @@
 #include "LoadingState.h"
 #include "ResourceManager.h"
 #include "StateMachine.h"
+#include <crtdbg.h>
 
 LoadingState::LoadingState()
 {
@@ -10,6 +11,8 @@ LoadingState::LoadingState()
 	m_pCircle = new LoadingCircle();
 	m_pCircle->local_Transform.setPosition(560, -300);
 	timer = 0;
+
+	_ASSERT(m_pCircle);
 }
 
 

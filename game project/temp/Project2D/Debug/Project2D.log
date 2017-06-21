@@ -1,4 +1,22 @@
-﻿  PauseState.cpp
-  Application2D.cpp
+﻿  StateMachine.cpp
+  ObjectPool.cpp
   Generating Code...
+  Skipping... (no relevant changes detected)
+  main.cpp
+  Walls.cpp
+  WallRight.cpp
+  WallLeft.cpp
+  WallBot.cpp
+  SplashState.cpp
+  SATbase.cpp
+  Rock.cpp
+  Player.cpp
+  PauseState.cpp
+  MenuState.cpp
+  LoadingState.cpp
+  LoadingCircle.cpp
+  GameState.cpp
+  GameObject.cpp
+  Bullet.cpp
+  Application2D.cpp
   Project2D.vcxproj -> L:\assignments\game project\temp\Project2D\Debug\Project2D.exe

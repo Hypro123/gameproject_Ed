@@ -25,7 +25,7 @@ public:
 	//Entities
 	Rock* rock;
 	Player* player;
-	Walls* wall;
+	Walls* walltop;
 	WallBot* wallbot;
 	WallLeft* wallleft;
 	WallRight* wallright;

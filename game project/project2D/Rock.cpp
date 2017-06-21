@@ -1,12 +1,14 @@
 #include "Rock.h"
 #include "Renderer2D.h"
 #include "SATbase.h"
+#include "ResourceManager.h"
 
 using namespace aie;
 
 Rock::Rock()
 {
-	m_rock = new Texture("./textures/rock_large.png");
+	ResourceManager<Texture>* Rman = ResourceManager<Texture>::getInstance();
+	m_rock = Rman->LoadResource("./textures/rock_large.png");
 
 	this->setTag(ROCK);
 

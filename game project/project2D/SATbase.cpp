@@ -1,6 +1,7 @@
 #include "SATbase.h"
 #include "Vector2.h"
 #include "DynamicArray.h"
+#include <crtdbg.h>
 
 SATbase* SATbase::m_instance = nullptr;
 
@@ -20,7 +21,10 @@ SATbase* SATbase::GetInstance()
 void SATbase::Create()
 {
 	if (m_instance == nullptr)
+	{
 		m_instance = new SATbase();
+		_ASSERT(m_instance);
+	}
 }
 
 void SATbase::Destroy()

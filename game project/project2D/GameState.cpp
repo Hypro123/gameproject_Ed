@@ -2,6 +2,7 @@
 #include "StateMachine.h"
 #include "ResourceManager.h"
 #include "Input.h"
+#include <crtdbg.h>
 
 using namespace aie;
 
@@ -11,11 +12,18 @@ GameState::GameState()
 	SAT->Create();
 	
 	rock = new Rock();
-	wall = new Walls();
+	walltop = new Walls();
 	wallbot = new WallBot();
 	wallleft = new WallLeft();
 	wallright = new WallRight();
 	player = new Player();
+
+	_ASSERT(rock);
+	_ASSERT(walltop);
+	_ASSERT(wallbot);
+	_ASSERT(wallright);
+	_ASSERT(wallleft);
+	_ASSERT(player);
 }
 
 
@@ -25,7 +33,7 @@ GameState::~GameState()
 	delete wallright;
 	delete wallleft;
 	delete wallbot;
-	delete wall;
+	delete walltop;
 	delete rock;
 	SAT->Destroy();
 }
@@ -42,7 +50,7 @@ void GameState::OnDraw(aie::Renderer2D* m_2dRenderer)
 {
 	player->draw(m_2dRenderer);
 	rock->drawRock(m_2dRenderer);
-	wall->draw(m_2dRenderer);
+	walltop->draw(m_2dRenderer);
 	wallbot->draw(m_2dRenderer);
 	wallleft->draw(m_2dRenderer);
 	wallright->draw(m_2dRenderer);

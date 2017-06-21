@@ -1,5 +1,6 @@
 #pragma once
 #include"String.h"
+#include <crtdbg.h>
 
 template
 <typename T>
@@ -13,6 +14,7 @@ public:
 		strcpy_s(m_szFileName, length, szFileName);
 		
 		m_Data = new T(szFileName);
+		_ASSERT(m_Data);
 	}
 	~Resource()
 	{

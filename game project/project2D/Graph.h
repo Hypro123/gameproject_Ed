@@ -9,18 +9,23 @@ template
 class Graph
  {
  public:
+	 //-------------------------------------------------
+	 //Constructor and destructor
+	 //-------------------------------------------------
 	 Graph(){}
 	 ~Graph(){}
+
+	 //--------------------------------------
+	 //Can add and remove nodes in the graph
+	 //--------------------------------------
 
 	 void Insert(T Data) {}
 	 void Remove(GraphNode<T>) {}
 	 void Remove(T Data) {}
 
-	 void recursive(int val)
-	 {
-		
-	 }
-
+	 //-------------------------------------------------------------------------
+	 //Adds graphnodes into the stack so that they can be combined into a graph
+	 //-------------------------------------------------------------------------
 	 void DrawGraph()
 	 {
 		for(int i = 0; i < m_Nodes->Size(); ++i)

@@ -1,16 +1,23 @@
 #pragma once
 #include "ListNode.h"
+#include <crtdbg.h>
 
 template
 <typename T>
 class LinkedList
 {
 public:
+	
+	//------------------------------------------------------------------------------------------
+	//Initialises the Linked list and sets all of the pointers and data to what they need to be
+	//------------------------------------------------------------------------------------------
+
 	LinkedList()
 	{
 		start = new ListNode<T>();
+		_ASSERT(start);
 		end = new ListNode<T>();
-
+		_ASSERT(end);
 		start->next = end;
 		start->prev = nullptr;
 
@@ -18,11 +25,19 @@ public:
 		end->prev = start;
 	}
 
+	//-------------------------------------------------------------------------
+	//Deconstructs the start and end pointers when they are no longer required
+	//-------------------------------------------------------------------------
+
 	~LinkedList()
 	{
 		delete start;
 		delete end;
 	}
+
+	//------------------------------------------
+	//Inserts a new listnode into a linked list
+	//------------------------------------------
 
 	void insert(T value, ListNode<T>* prev, ListNode<T>* next)
 	{
@@ -38,15 +53,29 @@ public:
 		NewNode->prev = prev;
 	}
 
+	//--------------------------------
+	//Pushes the value down the stack
+	//--------------------------------
+
 	void pushBack(T value)
 	{
 		insert(value, end->prev, end);
 	}
 
+	//------------------------------------------
+	//Pushes the data to the next list location
+	//------------------------------------------
+
 	void pushFront(T value)
 	{
 		insert(value, start, start->next);
 	}
+
+	//-------------------------------------------------------
+	//Inserts a value into the particular specified location
+	//eg. data -> list[3] if filled it wont work if it is not 
+	//filled then add to the location.
+	//-------------------------------------------------------
 
 	void IndexInsert(T value, int index)
 	{
@@ -63,6 +92,10 @@ public:
 		insert(value, current, current->next);
 	}
 	
+	//-------------------------------------------
+	//returns the first piece of data in the list
+	//-------------------------------------------
+
 	T First()
 	{
 		//List is empty
@@ -76,6 +109,10 @@ public:
 			return value;
 		}
 	}
+
+	//------------------------------------------
+	//returns the last piece of data in the list
+	//------------------------------------------
 
 	T Last()
 	{
@@ -91,10 +128,18 @@ public:
 		}
 	}
 
+	//------------------------------------
+	//returns the size of the linked list
+	//------------------------------------
+
 	int Size()
 	{
 		return Count;
 	}
+
+	//----------------------------------------
+	//Checks whether the list is empty or not
+	//----------------------------------------
 
 	bool empty()
 	{
@@ -107,6 +152,10 @@ public:
 			return false;
 		}
 	}
+
+	//---------------------------------------------------
+	//takes away the last data value in the list
+	//---------------------------------------------------
 
 	T popBack()
 	{
@@ -126,6 +175,10 @@ public:
 		}
 	}
 
+	//----------------------------------------------------------
+	//Takes away the first element in the list
+	//----------------------------------------------------------
+
 	T popFront()
 	{
 		ListNode<T>* n = start->next;
@@ -144,6 +197,10 @@ public:
 		}
 	}
 
+	//------------------------------------------------------
+	//Clears the entire list
+	//------------------------------------------------------
+
 	void clear()
 	{
 		while(start->next != end)
@@ -151,6 +208,10 @@ public:
 			popBack();
 		}
 	}
+
+	//------------------------------------------------------------
+	//Erases a particular list value and clears the list location
+	//------------------------------------------------------------
 
 	void erase(int index)
 	{
@@ -173,6 +234,10 @@ public:
 		delete current;
 		--Count;
 	}
+
+	//--------------------------------------------------------------------
+	//Removes a particular value and leaves the location blank/rand value
+	//--------------------------------------------------------------------
 
 	void remove(T value)
 	{

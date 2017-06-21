@@ -6,6 +6,7 @@
 #include"VectorCast.h"
 #include"ObjectPool.h"
 #include"Bullet.h"
+#include <crtdbg.h>
 
 using namespace aie;
 
@@ -34,6 +35,7 @@ Player::Player()
 
 	//creates objectpool
 	objectpool = new ObjectPool(50);
+	_ASSERT(objectpool);
 }
 
 

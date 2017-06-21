@@ -17,14 +17,21 @@ public:
 		m_bTraversed = false;
 	}
 
+	//---------------------------------------
+	//Adds connections in the graph
+	//---------------------------------------
+
 	void AddConnection(GraphNode<T>* other)
 	{
 		m_Edges->pushBack(other);
 	}
 
+	//------------------------------------------------
+	//Removes connection between different graphnodes
+	//------------------------------------------------
+
 	void RemoveConnection(GraphNode<T>* other)
 	{
-		//m_Edges->remove();
 		
 		for(int i = 0; i < m_Edges->Size(); ++i)
 		{

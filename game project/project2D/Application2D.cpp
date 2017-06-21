@@ -33,6 +33,9 @@ bool Application2D::startup()
 	pStateMachine->AddState(3, new GameState());
 	pStateMachine->AddState(4, new PauseState());
 	
+	_ASSERT(pStateMachine);
+	_ASSERT(m_2dRenderer);
+
 	pStateMachine->pushState(0);
 	m_timer = 0;
 

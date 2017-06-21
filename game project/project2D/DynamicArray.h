@@ -1,5 +1,6 @@
 #pragma once
 #include<memory.h>
+#include <crtdbg.h>
 
 template <typename T>
 class DynamicArray
@@ -18,6 +19,7 @@ public:
 			nCapacity = 1;
 
 		m_pData = new T[nCapacity];
+		_ASSERT(m_pData);
 		m_nCapacity = nCapacity;
 		m_nUsed = 0;
 		m_nullvalue = 0;
@@ -47,6 +49,7 @@ public:
 		m_nUsed = other.m_nUsed;
 		
 		m_pData = new T[other.m_nCapacity];
+		_ASSERT(m_pData);
 		memcpy(m_pData, other.m_pData, sizeof(T) * m_nCapacity);
 		m_nullvalue = 0;
 	}
@@ -124,6 +127,7 @@ public:
 			nCapacity = 1;
 		
 		T* newData = new T[m_nUsed];
+		_ASSERT(newData);
 		memcpy(newData, m_pData, sizeof(T) * m_nUsed);
 		
 		delete m_pData;
@@ -222,6 +226,7 @@ private:
 	{
 		//create new array with larger capacity
 		T* newData = new T[m_nCapacity * 2];
+		_ASSERT(newData);
 		memcpy(newData, m_pData, sizeof(T) * m_nCapacity);
 
 		//delete old array

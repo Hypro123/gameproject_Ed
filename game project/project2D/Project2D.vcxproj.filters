@@ -119,9 +119,6 @@
     <ClInclude Include="DynamicArray.h">
       <Filter>Container Classes &amp; Patterns Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Container Classes &amp; Patterns Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Graph.h">
       <Filter>Container Classes &amp; Patterns Headers</Filter>
     </ClInclude>
