@@ -6,11 +6,15 @@
 
 using namespace aie;
 
+//------------
+//Constructor
+//------------
 GameState::GameState()
 {
-	
+	//Creates the Collider
 	SAT->Create();
 	
+	//Creates a pointer to all of these Objects
 	rock = new Rock();
 	walltop = new Walls();
 	wallbot = new WallBot();
@@ -18,6 +22,7 @@ GameState::GameState()
 	wallright = new WallRight();
 	player = new Player();
 
+	//Asserts for debugging puproses
 	_ASSERT(rock);
 	_ASSERT(walltop);
 	_ASSERT(wallbot);
@@ -26,7 +31,9 @@ GameState::GameState()
 	_ASSERT(player);
 }
 
-
+//--------------
+//Deconstructor
+//--------------
 GameState::~GameState()
 {
 	delete player;
@@ -46,6 +53,9 @@ void GameState::OnExit()
 {
 }
 
+//----------------------------------------
+//Draws all of this when OnDraw is Called
+//----------------------------------------
 void GameState::OnDraw(aie::Renderer2D* m_2dRenderer)
 {
 	player->draw(m_2dRenderer);
@@ -56,6 +66,9 @@ void GameState::OnDraw(aie::Renderer2D* m_2dRenderer)
 	wallright->draw(m_2dRenderer);
 }
 
+//-----------------------------------------------------------------
+//Updates everything whithin the state, in this case runs the game
+//-----------------------------------------------------------------
 void GameState::OnUpdate(float deltaTime, StateMachine* pStateMachine, Renderer2D* m_2dRenderer)
 {
 	player->update(deltaTime);

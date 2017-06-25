@@ -1,16 +1,15 @@
-﻿  StateMachine.cpp
-  ObjectPool.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  main.cpp
-  Walls.cpp
-  WallRight.cpp
-  WallLeft.cpp
-  WallBot.cpp
+﻿  Walls.cpp
+g:\version control\game project\project2d\walls.cpp(20): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+g:\version control\game project\project2d\walls.cpp(21): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
   SplashState.cpp
   SATbase.cpp
   Rock.cpp
+g:\version control\game project\project2d\rock.cpp(20): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
+g:\version control\game project\project2d\rock.cpp(21): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
   Player.cpp
+g:\version control\game project\project2d\player.cpp(39): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+g:\version control\game project\project2d\player.cpp(40): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+g:\version control\game project\project2d\player.cpp(166): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   PauseState.cpp
   MenuState.cpp
   LoadingState.cpp
@@ -18,5 +17,13 @@
   GameState.cpp
   GameObject.cpp
   Bullet.cpp
+g:\version control\game project\project2d\bullet.cpp(37): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+g:\version control\game project\project2d\bullet.cpp(38): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+g:\version control\game project\project2d\bullet.cpp(55): warning C4305: 'argument': truncation from 'double' to 'float'
+g:\version control\game project\project2d\bullet.cpp(57): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
+  Compiling...
   Application2D.cpp
-  Project2D.vcxproj -> L:\assignments\game project\temp\Project2D\Debug\Project2D.exe
+  Generating Code...
+  Project2D.vcxproj -> G:\version control\game project\temp\Project2D\Debug\Project2D.exe
+  Project2D.vcxproj -> G:\version control\game project\temp\Project2D\Debug\Project2D.pdb (Full PDB)

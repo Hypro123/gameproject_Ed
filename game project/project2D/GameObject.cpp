@@ -2,19 +2,27 @@
 #include "VectorCast.h"
 
 
+
+//------------
+//Constructor
+//------------
 GameObject::GameObject()
 {
+	//Initialising Main components	
 	m_parent = nullptr;
 	setDimensions(100.0f, 100.0f);
-	m_fhealth = 999999;
 }
 
-
+//--------------
+//Deconstructor
+//--------------
 GameObject::~GameObject()
 {
 }
 
-
+//---------------------------------------------------
+//Get position function is made here for convenience
+//---------------------------------------------------
 Vector2 GameObject::GetPosition()
 {
 	Vector2 pos;
@@ -23,16 +31,25 @@ Vector2 GameObject::GetPosition()
 	return pos;
 }
 
+//--------------------------------------------------------------------
+//This function is used  to make an object a parent of anotehr object
+//--------------------------------------------------------------------
 void GameObject::setParent(GameObject* sParent)
 {
 	m_parent = sParent;
 }
 
+//--------------------------------------------------------------------
+//This function is used in order to amke an object a child of another
+//--------------------------------------------------------------------
 void GameObject::setChild(GameObject* sChild)
 {
 	m_children.PushBack(sChild);
 }
 
+//--------------------------------------------------------------------
+//This globaly updates the transform of all of the exising Gameobjects
+//--------------------------------------------------------------------
 void GameObject::updateGlobalTransform()
 {
 	if(m_parent != nullptr)

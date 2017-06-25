@@ -4,20 +4,24 @@
 #include <crtdbg.h>
 
 SATbase* SATbase::m_instance = nullptr;
+//----------------------------------------
+//Constructor and deconstructor are empty
+//----------------------------------------
+SATbase::SATbase(){}
+SATbase::~SATbase(){}
 
-SATbase::SATbase()
-{
-}
-
-SATbase::~SATbase()
-{
-}
-
+//---------------------------------
+//Gets an instance of the Collider
+//---------------------------------
 SATbase* SATbase::GetInstance()
 {
 	return m_instance;
 }
 
+
+//---------------------
+//Creates the Collider
+//---------------------
 void SATbase::Create()
 {
 	if (m_instance == nullptr)
@@ -27,11 +31,18 @@ void SATbase::Create()
 	}
 }
 
+
+//------------------------------
+//Deletes the Collider instance
+//------------------------------
 void SATbase::Destroy()
 {
 	delete m_instance;
 }
 
+//-------------------------------------------
+//Creates the Actual Collder as a gameobject
+//-------------------------------------------
 void SATbase::CreateObject(GameObject* pObject)
 {
 	m_collisionList.PushBack(pObject);
@@ -49,7 +60,9 @@ void SATbase::RemoveObject(GameObject* pObject)
 	}
 }
 
-//check if colliding
+//---------------------------------------------------------------------------
+//Does the Collision Checking and returns everything within the "Hit" Struct
+//---------------------------------------------------------------------------
 Hit SATbase::CheckCollisions(GameObject* pObject)
 {
 	Hit hit;

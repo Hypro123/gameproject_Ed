@@ -7,6 +7,9 @@ template
 class Resource
 {
 public:
+	//-----------------------------------------
+	//Initalises the resource with a file name 
+	//-----------------------------------------
 	Resource(char* szFileName)
 	{
 		int length = strlen(szFileName) + 1;
@@ -16,6 +19,9 @@ public:
 		m_Data = new T(szFileName);
 		_ASSERT(m_Data);
 	}
+	//-------------------------------------------------
+	//Deletes the resources after they have bbeen used
+	//-------------------------------------------------
 	~Resource()
 	{
 		delete m_Data;

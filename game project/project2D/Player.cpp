@@ -10,27 +10,37 @@
 
 using namespace aie;
 
+
+//Defines all of the variables for the object to use for movement
 #define SPEED 300.0f
 #define DRAG 0.5f
 #define MASS 1.0f
 #define ROTSPEED 10
 
+//------------
+//Constructor
+//------------
 Player::Player()
 {
+	//Player tag assignment
 	this->setTag(PLAYER);
 	
+	//Uses the resourcemanager for the player's texture
 	ResourceManager<aie::Texture>* m_pResourceMan = ResourceManager<Texture>::getInstance();
 	m_shipTexture = m_pResourceMan->LoadResource("./textures/Fighter.png");
 
+	//Sets the speed, drag, mass and rotation speed for the player
 	rotSpeed = ROTSPEED;
 	speed = SPEED;
 	mass = MASS;
 	drag = DRAG;
 	
-	//Collisions
+	//Collisions, gets the sprites height and width
 	ColW = m_shipTexture->getWidth();
 	ColH = m_shipTexture->getHeight();
+	//Sets the collider dimensons
 	setDimensions(ColW, ColH);
+	//Gets an instance of the collider
 	SATbase::GetInstance()->CreateObject(this);
 
 	//creates objectpool
@@ -38,13 +48,18 @@ Player::Player()
 	_ASSERT(objectpool);
 }
 
-
+//--------------
+//Deconstructor
+//--------------
 Player::~Player()
 {
 	delete m_shipTexture;
 	delete objectpool;
 }
 
+//-----------------
+//Draws the Player
+//-----------------
 void Player::draw(Renderer2D* m_2dRenderer)
 {
 	m_2dRenderer->setCameraPos(global_Transform[2][0] - 640, global_Transform[2][1] - 360);
@@ -53,13 +68,13 @@ void Player::draw(Renderer2D* m_2dRenderer)
 	Input* input = Input::getInstance();
 	
 	m_2dRenderer->drawSpriteTransformed3x3(m_shipTexture, global_Transform, 0.0f, 0.0f, 0);
-
+	//Draws the bullet's whenever they are called from the objectpool
 	objectpool->draw(m_2dRenderer);
 }
 
 void Player::update(float deltaTime)
 {	
-	// input example
+	//Sets up all variables to be used in the player's update function
 	Input* input = Input::getInstance();
 	Vector2 PrevPos = GetPosition();
 	Vector3 direction;

@@ -106,6 +106,7 @@
     <ClCompile Include="SATbase.cpp" />
     <ClCompile Include="SplashState.cpp" />
     <ClCompile Include="StateMachine.cpp" />
+    <ClCompile Include="UnitTest.cpp" />
     <ClCompile Include="WallBot.cpp" />
     <ClCompile Include="WallLeft.cpp" />
     <ClCompile Include="WallRight.cpp" />
@@ -138,6 +139,7 @@
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
     <ClInclude Include="Tag.h" />
+    <ClInclude Include="UnitTest.h" />
     <ClInclude Include="WallBot.h" />
     <ClInclude Include="WallLeft.h" />
     <ClInclude Include="WallRight.h" />

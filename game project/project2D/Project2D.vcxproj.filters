@@ -84,6 +84,9 @@
     <ClCompile Include="PauseState.cpp">
       <Filter>States</Filter>
     </ClCompile>
+    <ClCompile Include="UnitTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
@@ -175,6 +178,9 @@
     </ClInclude>
     <ClInclude Include="PauseState.h">
       <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
